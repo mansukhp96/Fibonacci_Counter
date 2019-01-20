@@ -17,30 +17,30 @@ public class CounterTest {
   }
 
   @Test
-  public void testIncOnce() {
+  public void testIncOnce() { //test for increment once
     fi.incCount();
     assertEquals(2, fi.curPos());
   }
 
   @Test
-  public void testDecOnce() {
+  public void testDecOnce() { //test for decrement once
     fi.decCount();
     assertEquals("Invalid Position", fi.curPos());
   }
 
-  @Test(expected = IllegalArgumentException.class)
+  @Test(expected = IllegalArgumentException.class) //test the exception if it throws correctly
   public void testIIlegalArgExcp() {
     try {
       fi.decCount();
       fi.curPos();
       fail("The exception was not called!");
     } catch (IllegalArgumentException e) {
-      System.out.println("bro");
+      System.out.println("caught");
     }
   }
 
   @Test
-  public void testIncTwice() {
+  public void testIncTwice() { //Test for incrementing twice
     fi.incCount();
     fi.incCount();
     assertEquals(3, fi.curPos());
@@ -48,7 +48,7 @@ public class CounterTest {
   }
 
   @Test
-  public void testRandIncAndDec() {
+  public void testRandIncAndDec() { //test for random increment and decrement
     int randInc = (int) (Math.random() * 100);
     int randDec = (int) (Math.random() * 10);
     if (randInc > randDec) {
@@ -63,7 +63,7 @@ public class CounterTest {
   }
 
   @Test
-  public void testRandomInc() {
+  public void testRandomInc() { //test for random increment
     int rand = (int) (Math.random() * 100);
     for (int i = 1; i < rand; i++) {
       fi.incCount();
@@ -72,7 +72,7 @@ public class CounterTest {
   }
 
   @Test
-  public void testRandomIncFibNum() {
+  public void testRandomIncFibNum() { //test for checking the fibonacci num when random incremented
     int rand = (int) (Math.random() * 50);
     for (int i = 1; i < rand; i++) {
       fi.incCount();
