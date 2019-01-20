@@ -1,8 +1,9 @@
 package fib;
 
 /**
- * This interface represents a set of operations on rectangles. It is a scaled down functionality of
- * google maps tiles.
+ * This interface represents a set of operations on a fibonacci counter. A fibonacci counter is a
+ * machine that has increment and decrement functions. It also shows the current position and its
+ * corresponding fibonacci number.
  */
 
 public interface FibonacciCounter {
