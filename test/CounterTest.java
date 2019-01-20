@@ -25,10 +25,10 @@ public class CounterTest {
   @Test
   public void testDecOnce() { //test for decrement once
     fi.decCount();
-    assertEquals("Invalid Position", fi.curPos());
+    assertEquals("Invalid Position", fi.curPos());//should throw exception and fail
   }
 
-  @Test(expected = IllegalArgumentException.class) //test the exception if it throws correctly
+  @Test(expected = IllegalArgumentException.class) //test the excep. if it throws correctly
   public void testIIlegalArgExcp() {
     try {
       fi.decCount();

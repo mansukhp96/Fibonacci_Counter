@@ -21,7 +21,7 @@ public class Counter implements FibonacciCounter {
   }
 
   @Override
-  public int curPos() throws IllegalArgumentException { //method that returns the current position number
+  public int curPos() throws IllegalArgumentException { //method returns the cur position number
     if (pos <= 0) {
       throw new IllegalArgumentException("Invalid Position");
     }
